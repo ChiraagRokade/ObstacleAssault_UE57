@@ -15,8 +15,7 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Display, TEXT("Let's Play"));
-	UE_LOG(LogTemp, Warning, TEXT("Watch out!"));
+
 }
 
 // Called every frame
@@ -24,5 +23,8 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	TargetLocation.X = TargetLocation.X + 1;
+
+	SetActorLocation(TargetLocation);
 }
 
