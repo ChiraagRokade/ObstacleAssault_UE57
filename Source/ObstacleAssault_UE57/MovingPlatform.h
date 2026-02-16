@@ -26,4 +26,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	FVector PlatformVelocity = FVector(0.0f, 0.0f, 0.0f);
 
+	void MovingPlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
+
 };
