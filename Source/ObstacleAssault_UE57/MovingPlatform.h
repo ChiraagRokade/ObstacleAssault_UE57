@@ -37,4 +37,5 @@ public:
 	void MovingPlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
 
+	float GetDistanceMoved() const;
 };
