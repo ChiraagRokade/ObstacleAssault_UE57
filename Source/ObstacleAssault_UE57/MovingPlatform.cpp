@@ -26,9 +26,9 @@ void AMovingPlatform::Tick(float DeltaTime)
 	RotatePlatform(DeltaTime);
 }
 
+// Move the platform
 void AMovingPlatform::MovingPlatform(float DeltaTime)
 {
-	
 	// We also calculate the distance moved from the starting location to keep track of how far the platform has traveled
 	DistanceMoved = GetDistanceMoved();
 	UE_LOG(LogTemp, Warning, TEXT("Distance Moved: %f"), DistanceMoved);
@@ -52,9 +52,10 @@ void AMovingPlatform::MovingPlatform(float DeltaTime)
 	}
 }
 
+// Rotate the platform
 void AMovingPlatform::RotatePlatform(float DeltaTime)
 {
-	// Rotate the platform
+	// We multiply the rotation velocity by DeltaTime to ensure consistent rotation regardless of frame rate
 	FRotator RotationToAdd = RotationVelocity * DeltaTime;
 	AddActorLocalRotation(RotationToAdd);
 }
