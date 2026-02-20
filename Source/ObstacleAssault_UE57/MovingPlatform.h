@@ -30,7 +30,7 @@ public:
 	float MoveDistance = 100.0f;
 
 	UPROPERTY(VisibleAnywhere, category = "Movement")
-	float DistanceMoved = 0.0f;
+	float DistanceMoved = 300.0f;
 	
 	FVector StartLocation;
 
